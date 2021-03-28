@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "19e1bc45-ddb3-4fed-ac4e-162767c8f48c",
+		"name": "Interview Device Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"deviceId\": \"1\",\r\n\t\"domain\": \"retail\",\r\n\t\"state\": \"Balore\",\r\n\t\"city\": \"Karste\",\r\n\t\"location\": {\r\n\t\t\"type\": \"different\",\r\n\t\t\"coordinates\": \"1.2,2.1\"\r\n\t},\r\n\t\"deviceType\": \"sameType\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/devices",
+				"description": "Adding a new device "
+			},
+			"response": []
+		},
+		{
+			"name": "Get Devices",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"deviceId\": \"1\",\r\n\t\"domain\": \"retail\",\r\n\t\"state\": \"Balore\",\r\n\t\"city\": \"Karste\",\r\n\t\"location\": {\r\n\t\t\"type\": \"different\",\r\n\t\t\"coordinates\": \"1.2,2.1\"\r\n\t},\r\n\t\"deviceType\": \"sameType\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/devices"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Device By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"deviceId\": \"1\",\r\n\t\"domain\": \"retail\",\r\n\t\"state\": \"Balore\",\r\n\t\"city\": \"Karste\",\r\n\t\"location\": {\r\n\t\t\"type\": \"different\",\r\n\t\t\"coordinates\": \"1.2,2.1\"\r\n\t},\r\n\t\"deviceType\": \"sameType\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/devices/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Device By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"deviceId\": \"1\",\r\n\t\"domain\": \"retail\",\r\n\t\"state\": \"Balore\",\r\n\t\"city\": \"Karste\",\r\n\t\"location\": {\r\n\t\t\"type\": \"different\",\r\n\t\t\"coordinates\": \"1.2,2.1\"\r\n\t},\r\n\t\"deviceType\": \"sameType\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/devices/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Device By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"deviceId\": \"1\",\r\n\t\"domain\": \"retail\",\r\n\t\"state\": \"Balore\",\r\n\t\"city\": \"Karste\",\r\n\t\"location\": {\r\n\t\t\"type\": \"different\",\r\n\t\t\"coordinates\": [\"1.2\",\"2.1\"]\r\n\t},\r\n\t\"deviceType\": \"sameType\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/devices/1"
+			},
+			"response": []
+		}
+	]
+}
