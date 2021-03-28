@@ -1,7 +1,5 @@
 # interview
-Device CRUD using vertx
-
-= IoT devices datastore
+Iot Device Datstore CRUD using vertx
 
 A simple REST API backend using vert.x framework for IoT devices datastore
 which will store all the details related to IoT devices. Application also provides APIs to 
@@ -28,21 +26,20 @@ add, update, delete and get device details.
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
             <version>3.8.1</version>
-        </dependency>
-        <dependency>
+      </dependency>
+      <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-web</artifactId>
             <version>3.8.1</version>
-        </dependency>
+      </dependency>
 
 
 ## Building
 
 You build the project using:
 
-```
 mvn clean package
-```
+
 
 ## Testing
 
@@ -55,11 +52,10 @@ The application is packaged as a _fat jar_, using the
 
 ## Running
 
-Once packaged, just launch the _fat jar_ as follows:
+Once packaged, just launch the jar_ as follows:
 
-```
 java -jar target/interview-1.0-SNAPSHOT.jar
-```
+
 
 Then, open a browser to http://localhost:8080.
 
@@ -143,8 +139,10 @@ Browser: http://localhost:8081/send/:message
 Check the console to witness the communication between verticles by point to point messaging
 
 ### Added Open API specs i,e swagger-ui
-Path : src/resources/webroot/index.html -> Open in Browser
+Path : src/resources/webroot/index.html -> Open in Browser :(Refer Open API specs screenshots)
 ### JUnit Test Cases
+Run MainVerticleTest.java as JUnit Test.
+Refer Postman collection file i,e Interview Device Collection.postman_collection.json -> Import this JSON in Postman to test all the APIs.
 
 
 
