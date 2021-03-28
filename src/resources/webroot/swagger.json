@@ -1,0 +1,157 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: IOT Device Datastore
+  contact: {}
+host: 'localhost:8080'
+basePath: /api
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /devices:
+    post:
+      description: 'Adding a new device '
+      summary: Add Device
+      tags:
+        - Datastore
+      operationId: AddDevice
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/Device'
+      responses:
+        '200':
+          description: New device added
+          headers: {}
+    get:
+      summary: Get Devices
+      tags:
+        - Datastore
+      operationId: GetDevices
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: Get all devices details
+          headers: {}
+  '/devices/{deviceId}':
+    get:
+      summary: Get Device By ID
+      tags:
+        - Datastore
+      operationId: GetDeviceByID
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: deviceId
+          in: path
+          description: device id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Get device by id
+          headers: {}
+    delete:
+      summary: Delete Device By ID
+      tags:
+        - Datastore
+      operationId: DeleteDeviceByID
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: Device deleted
+          headers: {}
+    put:
+      summary: Update Device By ID
+      tags:
+        - Datastore
+      operationId: UpdateDeviceByID
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/Device'
+      responses:
+        '200':
+          description: Device details updated
+          headers: {}
+definitions:
+  Device:
+    title: Device
+    example:
+      deviceId: '1'
+      domain: retail
+      state: Balore
+      city: Karste
+      location:
+        type: different
+        coordinates: '1.2,2.1'
+      deviceType: sameType
+    type: object
+    properties:
+      deviceId:
+        type: string
+      domain:
+        type: string
+      state:
+        type: string
+      city:
+        type: string
+      location:
+        $ref: '#/definitions/Location'
+      deviceType:
+        type: string
+    required:
+      - deviceId
+      - domain
+      - state
+      - city
+      - location
+      - deviceType
+  Location:
+    title: Location
+    example:
+      type: different
+      coordinates: '1.2,2.1'
+    type: object
+    properties:
+      type:
+        type: string
+      coordinates:
+        type: object
+    required:
+      - type
+      - coordinates
+
