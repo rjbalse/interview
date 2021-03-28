@@ -1,0 +1,6 @@
+com\datakaveri\interview\MessengerLauncher.class
+com\datakaveri\interview\ReceiverVerticle.class
+com\datakaveri\interview\model\Device.class
+com\datakaveri\interview\MainVerticle.class
+com\datakaveri\interview\model\Location.class
+com\datakaveri\interview\SenderVerticle.class
