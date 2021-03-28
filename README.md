@@ -22,16 +22,16 @@ add, update, delete and get device details.
 ### Dependency
 ### Maven
 ```xml
- 			<dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-            <version>3.8.1</version>
-      </dependency>
-      <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
-            <version>3.8.1</version>
-      </dependency>
+<dependency>
+  <groupId>io.vertx</groupId>
+  <artifactId>vertx-core</artifactId>
+  <version>3.8.1</version>
+</dependency>
+<dependency>
+  <groupId>io.vertx</groupId>
+  <artifactId>vertx-web</artifactId>
+  <version>3.8.1</version>
+</dependency> 	
 
 
 ## Building
